@@ -17,7 +17,7 @@ public class TestCarsDao {
 	public void testSelectAllByLevelAndType(){
 		String level = "S";
 		String type = "轿车";
-		List<Cars> list = cd.selectAllByLevelAndType(level,type);
+		List<Cars> list = cd.selectAll();
 		
 		System.out.println(list);
 	}

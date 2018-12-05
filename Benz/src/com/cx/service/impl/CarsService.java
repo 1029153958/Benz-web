@@ -1,12 +1,10 @@
-package com.cx.dao;
+package com.cx.service.impl;
 
 import java.util.List;
 
 import com.cx.entity.Cars;
 
-public interface CarsDao {
+public interface CarsService {
 
 	List<Cars> selectAll();
-	
-	
 }

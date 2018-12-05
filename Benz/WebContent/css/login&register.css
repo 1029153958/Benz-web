@@ -1,0 +1,32 @@
+.bg{
+	 background-image: url(../img/bg.jpg);
+	 background-size: cover;
+	}
+.mylogin1{
+		  border: 1px solid black;
+          width:600px;
+		  height: 400px;					
+		  padding: 50px ;
+		  border-radius: 20px;
+		  box-shadow: 2px 2px 4px black;
+		  background-color:rgba(255,255,255,.3);
+		  position: relative;
+		  left:25%;
+		}
+.mylogin2{
+		    border: 1px solid black;				
+			width:600px;
+			height: 800px;					
+			padding: 50px ;
+			border-radius: 20px;
+			box-shadow: 2px 2px 4px black;
+			background-color:rgba(255,255,255,.5);
+		    position: relative;
+			left:25%;
+		}
+.btn{ 
+	    height: 30px;
+		width: 200px;
+		background-color:lightblue;
+		border-radius: 20px;
+}

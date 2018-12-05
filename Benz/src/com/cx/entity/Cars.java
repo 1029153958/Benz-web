@@ -7,9 +7,22 @@ public class Cars {
 	private String car_level;
 	private String car_img;
 	private String car_type;
+	private String car_href;
 	
 	
 	
+	public String getCar_href() {
+		return car_href;
+	}
+
+
+
+	public void setCar_href(String car_href) {
+		this.car_href = car_href;
+	}
+
+
+
 	public String getCar_name() {
 		return car_name;
 	}
@@ -73,8 +86,12 @@ public class Cars {
 	@Override
 	public String toString() {
 		return "Cars [car_name=" + car_name + ", car_price=" + car_price + ", car_level=" + car_level + ", car_img="
-				+ car_img + ", car_type=" + car_type + "]";
+				+ car_img + ", car_type=" + car_type + ", car_href=" + car_href + "]";
 	}
+
+
+
+	
 
 
 

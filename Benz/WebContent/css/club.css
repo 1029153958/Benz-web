@@ -1,0 +1,48 @@
+.bc{
+		height: 600px;
+		width: 83%;
+		background-color: white;
+		box-shadow: 0px 0px 10px gray;
+		margin-top: 5%;
+	}
+	.bts{
+		padding-top: 10px;
+		padding-left: 8%;
+		height: 50px;
+		background-color:#E0E0E0;
+	}
+	.div5{
+				padding-left: 80px;
+				margin-top: 250px;
+			}
+	.wordback{
+		height: 300px;
+		width: 70.55%;
+		background-color:white;
+		margin-left: 15%;
+		margin-top: -100px;
+	}
+	.word{
+		padding:3% 15% ;
+	}
+	.code{
+		height: 300px;
+		width: 83%;
+		background-color:white;
+		padding:3% 5% ;
+	}
+	.shadow{
+		height: 150px;
+		width: 150px;
+		background-color: white;
+		box-shadow:0px 0px 10px gray; 
+		position: relative;	
+		}
+	#b1{
+		height: 100px;
+		width: 70.55%;
+		background-color: white;
+		margin-left: 15%;
+		margin-top: -100px;
+		position: absolute;
+	}

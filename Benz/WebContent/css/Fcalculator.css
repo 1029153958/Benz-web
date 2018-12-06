@@ -1,0 +1,46 @@
+	.title{color: #666;text-align: center;font-size: 30px;margin:6%}
+			.title:before,.title:after{content: "";width: 100px;border-top: 3px #e1e1e1 solid; display: inline-block;
+			vertical-align: middle;}
+			.title:before{   width:420px;}
+			.title:after{    width: 420px;}
+			.size{
+				width:350px;
+				height:50px;
+				border:0px;
+				font-size:18px;
+			}
+			.pp{
+				width:32%;
+			}
+			.p2{
+				margin:10% 15%;
+				position:relative;
+			}
+			.subs{
+				height: 50px;
+				width: 150px;
+				background-color: deepskyblue;
+				border: 0px;
+				color: white;
+				font-size: 18px;
+				cursor:pointer;
+			}
+			.cols{
+				margin:-38% 50%;
+				position:absolute;
+				
+			}
+			.pics{
+				width:500px;
+				height:220px;
+			}
+			.bts{
+				margin:30px 160px;
+				height: 50px;
+				width: 150px;
+				background-color: deepskyblue;
+				border: 0px;
+				color: white;
+				font-size: 18px;
+				cursor:pointer;
+			}

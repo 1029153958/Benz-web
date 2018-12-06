@@ -3,28 +3,18 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
 		<meta charset="UTF-8">
-		<title>预约试驾</title>
-		<link rel="stylesheet" type="text/css" href="/Benz/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="/Benz/css/header.css" />
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="/Benz/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" />	
+		<!--引用订单查询的css文件-->
+		<link rel="stylesheet" type="text/css" href="/Benz/css/order-info.css" />
+		<!--应用网页底部的css文件-->
 		<link rel="stylesheet" href="/Benz/css/foot.css" />
-		<link rel="stylesheet" href="/Benz/css/homepage_body.css" />
+		<!--应用网页头部的css文件-->
+		<link rel="stylesheet" href="/Benz/css/header.css" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<style type="text/css">
-			.mytext{
-				    -webkit-appearance: none;
-				    width: 60%;
-				    height: 50px;
-				    border: none;
-				    border-bottom: 1px solid gray;
-				    margin-bottom: 20px;
-			}
-			fieldset a:hover{
-				text-decoration: none;
-			}
-		</style>
 	</head>
 	<body>
 		<header class="container header"style="overflow-x: hidden;overflow-y: hidden;">
@@ -440,30 +430,61 @@
 				</div>
 			</div>
 		</header>
-		<div style="height: 900px;">
-			<div class="title myfont" style="padding-top: 100px;padding-bottom: 100px;">预约试驾</div>
-			<div style="z-index: -1;">
-				<img src="/Benz/img/testdrivebg.jpg" style="float: right;"/>
-			</div>
-			<div style="padding-left: 13%;">
-				<form>
-					<fieldset>
-						<legend style="width: 60%;font-size: 14px;">欢迎在线预约试驾。只需填写姓名及手机号，我们会第一时间与您联系，安排试驾事宜。</legend>
-						<input class="mytext" type="text" placeholder="姓名"/><br />
-						<input type="radio" name="gender" value="Male" checked="checked" style="width: 5%;"/><span>男士</span>
-						<input type="radio" name="gender" value="Female" style="width: 5%;"/><span>女士</span>
-						<br />
-						<input class="mytext" type="text" placeholder="手机号码" style="margin-top: 20px;"/><br />
-						<input class="mytext" type="text" placeholder="地址" /><br />
-						<input class="mytext" type="text" id="t1" placeholder="请输入下方验证码" onblur="but()" /><br />
-						<span id="discode"></span>
-						<input type="button" value="换一换" class="c" style="height:30px;"onClick="createCode()"><br />
-						<input type="checkbox" style="margin: 20px;"/>我已仔细阅读并接受了所有<a href="#">隐私条款</a>
-						<div class="font-model text-center" style="background-color: #00ADEF;width: 30%;padding: 10px;margin-left: 5%;">
-							<a href="#"><span style="color: #FFFFFF;font-size: 20px;">申请试驾</span></a>
-						</div>
-					</fieldset>
-				</form>
+		
+		<div id="my-order">
+			<div class="order-info">
+				<div class="div-title">
+					<div class="order-title-name">
+						订单查询
+					</div>
+					<div class="order-title-date">
+						8102年92月11日
+					</div>
+				</div>
+				
+				<legend ></legend>
+				
+				<div class="div-receiver">
+					<div class="order-receiver">
+			            <b class="title-receiver">收件人</b><br>
+			            <br>
+			            <b>姓名：</b>王翠花<br>
+			            <b>地址：</b>上海市黄浦区南京路步行街666号<br>
+			            <b>电话：</b>021-63582606<br>
+			        </div>
+			        <div class="order-number">
+			          	<b class="title-number">#183</b><br>
+			         	<br>
+			          	<b>创建时间：</b>2014-11-7 11:31<br>
+			          	<b>订单总额：</b>￥265.22<br>
+			          	<b>订单状态：</b>处理中
+			        </div>
+				</div>
+				
+				<legend ></legend>
+				<div class="order-body">
+					<div class="body-info-left">
+						<img src="#"/>
+					</div>
+					<div class="body-info-right">
+						<b>梅赛德斯-奔驰长轴距C级轿车</b><br>
+						<b>外观：</b>北极白色<br>
+			            <b>内饰：</b>黑色<br>
+			            <b>轮毂：</b>43.2 厘米（17 英寸）轻合金车轮<br>
+			            <b>精选定制：</b>无加装<br>
+			            <b>选装配备：</b>无加装<br>
+					</div>
+				</div>
+				
+				
+				<legend ></legend>
+				<div class="dealer-address">
+					<div class="dealer-address-right">
+						<b>上海冠松之星汽车销售服务有限公司虹口分公司（便捷服务中心）</b><br>
+						<b>地址：</b>虹口区大连路295号<br>
+			            <b>电话：</b>+ 86 21 65566617<br>
+					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -536,36 +557,9 @@
 				<span><a href="#"><img src="/Benz/img/homepage/zhihu_mouse_over.png"width="40px"height="40px"/></a></span>
 			</div>
 		</div>	
+		
 		<script src="/Benz/plugins/jquery/jquery.min.js"></script>
 		<script src="/Benz/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<script language="javascript">
-			var code; //在全局 定义验证码
-			function createCode()
-			{ //创建验证码函数
-			 code = "";
-			 var codeLength =4;//验证码的长度
-			 var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f','g','h','i','j','k',
-			  'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');//所有候选组成验证码的字符，当然也可以用中文的
-			 for(var i=0;i<codeLength;i++)
-			 { 
-			 var charIndex =Math.floor(Math.random()*36);
-			 code +=selectChar[charIndex]; 
-			 }
-			// 设置验证码的显示样式，并显示
-			 document.getElementById("discode").style.fontFamily="Fixedsys"; //设置字体
-			 document.getElementById("discode").style.letterSpacing="5px"; //字体间距
-			 document.getElementById("discode").style.color="#0ab000"; //字体颜色
-			 document.getElementById("discode").innerHTML=code; // 显示
-			}
-			function but()
-			{//验证验证码输入是否正确
-			 var val1=document.getElementById("t1").value;
-			 var val2=code;
-			 if(val1!=val2){
-			 	 alert("验证码错误!");
-				 document.getElementById('t1').value="";
-				}
-			}
-		</script>
+
 	</body>
 </html>

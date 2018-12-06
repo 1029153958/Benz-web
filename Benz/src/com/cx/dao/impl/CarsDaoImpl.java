@@ -13,8 +13,9 @@ import com.cx.util.support.IPreparedStatementCallBack;
 import com.cx.util.support.IResultSetCallBack;
 import com.cx.util.support.JdbcTemplate;
 
+@SuppressWarnings("all")
 public class CarsDaoImpl implements CarsDao{
-	@SuppressWarnings("all")
+	
 	
 	public List<Cars> selectAll() {
 		
@@ -22,7 +23,7 @@ public class CarsDaoImpl implements CarsDao{
 			
 			@Override
 			public PreparedStatement executePst(Connection conn) throws SQLException {
-				String sql="select * from cars";
+				String sql="select * from cars order by car_price";
 				
 				PreparedStatement pst = conn.prepareStatement(sql);
 				
@@ -50,8 +51,5 @@ public class CarsDaoImpl implements CarsDao{
 			}
 		});
 	}
-	
-	
-	
 	
 }

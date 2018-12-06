@@ -20,7 +20,7 @@ public class TestDriveDaoImpl implements  TestDriveDao{
 			@Override
 			public PreparedStatement executePst(Connection conn) throws SQLException {
 				
-				String sql="select * from test_drive where tel=?";
+				String sql="select * from user_info where tel=?";
 				PreparedStatement pst = conn.prepareStatement(sql);
 				pst.setString(1, tel);
 				return pst;
@@ -31,11 +31,8 @@ public class TestDriveDaoImpl implements  TestDriveDao{
 			public Object executeRscb(ResultSet rs) throws SQLException {
 				TestDrive td =new TestDrive();
 				if(rs.next()) {
-					td.setOrderName(rs.getString("order_name"));
-					td.setOrderGender(rs.getString("order_gender"));
+					td.setOrder_name(rs.getString("firstname")+rs.getString("lastname"));
 					td.setTel(rs.getString("tel"));
-					td.setCarName(rs.getString("car_name"));
-					td.setOrder_address(rs.getString("order_address"));
 				}
 				
 				return td;
@@ -51,14 +48,15 @@ public class TestDriveDaoImpl implements  TestDriveDao{
 			
 			@Override
 			public PreparedStatement executePst(Connection conn) throws SQLException {
-				String sql="insert into test_drive values(?,?,?,?,?)";
+				String sql="insert into test_drive values(?,?,?,?,?,?)";
 				
 				PreparedStatement pst = conn.prepareStatement(sql);
-				pst.setString(1, testdrive.getOrderName());
-				pst.setString(2, testdrive.getOrderGender());
+				pst.setString(1, testdrive.getOrder_name());
+				pst.setString(2, testdrive.getOrder_gender());
 				pst.setString(3, testdrive.getTel());
-				pst.setString(4, testdrive.getCarName());
+				pst.setString(4, testdrive.getCar_name());
 				pst.setString(5, testdrive.getOrder_address());
+				pst.setString(6, testdrive.getOrder_id());
 				
 				return pst;
 			}

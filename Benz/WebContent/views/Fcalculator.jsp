@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +22,7 @@
 	<body>
 		<header class="container header"style="overflow-x: hidden;overflow-y: hidden;">
 			<div class="div1" >
-				<a href="home_page.html" style="position: absolute;top: 5%;left: 3%;">
+				<a href="http://localhost:8888/Benz/views/home_page.jsp" style="position: absolute;top: 5%;left: 3%;">
 					<img src="/Benz/img/logo.png" />
 				</a>
 				<div class="myarea">
@@ -427,19 +430,19 @@
 						</div>
 						<div class="row" style="margin-bottom: 70px;">
 							<div class="col-md-3">
-								<a href="#"><img src="/Benz/img/customer-service/nav-promotion_660x360.jpg" width="100%"/>最新活动信息</a>
+								<a href="http://localhost:8888/Benz/views/promotion.jsp"><img src="/Benz/img/customer-service/nav-promotion_660x360.jpg" width="100%"/>最新活动信息</a>
 								<p style="font-size: 12px;padding-top: 5px;">丰富多彩的活动让车主享受车生活，与爱车共读美好时光</p>
 							</div>
 							<div class="col-md-3">
-								<a href="#"><img src="/Benz/img/customer-service/nav-maintenance-3x_660x360.jpg" width="100%"/>车辆保养与维修</a>
+								<a href="http://localhost:8888/Benz/views/customer-service.jsp"><img src="/Benz/img/customer-service/nav-maintenance-3x_660x360.jpg" width="100%"/>车辆保养与维修</a>
 								<p style="font-size: 12px;padding-top: 5px;">提供人性化的选车和购车方案，让购车体验更多元，更轻松。</p>
 							</div>
 							<div class="col-md-3">
-								<a href="#"><img src="/Benz/img/customer-service/nav-meclub-3x_660x360.jpg"width="100%"/>mercedes me车主俱乐部</a>
+								<a href="http://localhost:8888/Benz/views/club.jsp"><img src="/Benz/img/customer-service/nav-meclub-3x_660x360.jpg"width="100%"/>mercedes me车主俱乐部</a>
 								<p style="font-size: 12px;padding-top: 5px;">携手跨行业合作伙伴为会员打造优质的用车体验和多方位的生活关怀。</p>
 							</div>
 							<div class="col-md-3">
-								<a href="#"><img src="/Benz/img/customer-service/finance_service.jpg" width="100%"/>金融服务</a>
+								<a href="http://localhost:8888/Benz/views/finanical-service.jsp"><img src="/Benz/img/customer-service/finance_service.jpg" width="100%"/>金融服务</a>
 								<p style="font-size: 12px;padding-top: 5px;">选择奔驰金融，轻松拥享梦想星徽座驾。</p>
 							</div>
 						</div>
@@ -458,14 +461,14 @@
 			</div>
 		<div class="p2">
 		<h2>您好，请选择您心仪的奔驰座驾</h2><br/><br />
-		<form name="myform" id="myform" action="" onsubmit="">
+		<form name="myform" id="myform" action="/Benz/library/choosecar" method="post">
 			<div>
 					<select name="selProvinceClass" id="selProvinceClass" onchange="changeProvince()"class="size">
 						<option>--请选择类别--</option>
 						<option value="轿车">轿车</option>
 						<option value="SUV">SUV</option>
 						<option value="轿跑车&敞篷跑车">轿跑车&敞篷跑车</option>
-						<option value="SUV">MPV</option>
+						<option value="MPV">MPV</option>
 					</select><br />
 					<div class="pp">
 						<hr />
@@ -478,35 +481,39 @@
 						<hr />
 					</div>
 					<br />
-						<select name="selCity" id="selCity" onchange=""class="size">
+						<select name="car_name" id="selCity" onchange=""class="size">
 							<option>--请选择车型--</option>
 						</select><br />
 					<div class="pp">
 						<hr />
 					</div>
 			</div>
-		</form>
 			<br />
 			<button type="submit"value="确认"class="subs">确认</button>
-		</div>
-		<div class="cols"style="height: 500px;">
-			<img src="/Benz/img/Financial-calculator/L460.png" class="pics"/>
+			<div class="cols"style="height: 500px;">
+			<img src="${car.car_img}" class="pics"/>
 			 <br /><br /><br />
 			<div   class="col-md-4">
 			<p style="font-size: 19px;">您选择的座驾</p>
-			<p style="font-size: 19px;font-weight: bold;">S级轿车</p>
+			<p style="font-size: 19px;font-weight: bold;">${car.car_name }</p>
 			</div>
 			<div  class="col-md-4">
 			<p style="font-size: 19px;">厂商建议售价*</p>
-			<p style="font-size: 19px;font-weight: bold;">¥ 173.28 万</p>
+			<p style="font-size: 19px;font-weight: bold;">¥ ${car.car_price} 万</p>
 			</div>
 			<div  class="col-md-4">
 			<p style="font-size: 19px;">月供</p>
-			<p style="font-size: 19px;font-weight: bold;">¥ 5,190起</p>
+			<p style="font-size: 19px;font-weight: bold;">¥ 
+			
+			<fmt:parseNumber integerOnly="true" value="${car.car_price*1000/12}"></fmt:parseNumber>起</p>
 			</div>
 			
-			<a href="#"><button type="button"class="bts">订车</button></a>
+			<button type="button"class="bts" onclick="open_orderinfo()">订车</button>
+			
 		</div>
+		</form>
+		</div>
+		
 		<div class="p">
 			<div>
 			<ul>
@@ -579,5 +586,10 @@
 		<script src="/Benz/js/Fcalculator.js"></script>
 		<script src="/Benz/plugins/jquery/jquery.min.js"></script>
 		<script src="/Benz/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			function open_orderinfo(){
+				window.open("http://localhost:8888/Benz/views/order-info.jsp");
+			}
+		</script>
 	</body>
 </html>

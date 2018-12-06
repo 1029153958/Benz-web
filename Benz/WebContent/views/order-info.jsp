@@ -446,17 +446,17 @@
 				
 				<div class="div-receiver">
 					<div class="order-receiver">
-			            <b class="title-receiver">收件人</b><br>
+			            <b class="title-receiver">用户信息</b><br>
 			            <br>
-			            <b>姓名：</b>王翠花<br>
-			            <b>地址：</b>上海市黄浦区南京路步行街666号<br>
-			            <b>电话：</b>021-63582606<br>
+			            <b>姓名：</b>${new_driver.order_name}<br>
+			            <b>地址：</b>${new_driver.order_address}<br>
+			            <b>电话：</b>${new_driver.tel}<br>
 			        </div>
 			        <div class="order-number">
-			          	<b class="title-number">#183</b><br>
+			          	<b class="title-number">#${new_driver.order_id}</b><br>
 			         	<br>
 			          	<b>创建时间：</b>2014-11-7 11:31<br>
-			          	<b>订单总额：</b>￥265.22<br>
+			          	<b>订单总额：</b>￥${car.car_price}万<br>
 			          	<b>订单状态：</b>处理中
 			        </div>
 				</div>
@@ -464,10 +464,10 @@
 				<legend ></legend>
 				<div class="order-body">
 					<div class="body-info-left">
-						<img src="#"/>
+						<img src="${car.car_img}" style="width:130%"/>
 					</div>
 					<div class="body-info-right">
-						<b>梅赛德斯-奔驰长轴距C级轿车</b><br>
+						<b>${car.car_name}</b><br>
 						<b>外观：</b>北极白色<br>
 			            <b>内饰：</b>黑色<br>
 			            <b>轮毂：</b>43.2 厘米（17 英寸）轻合金车轮<br>

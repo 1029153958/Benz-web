@@ -35,18 +35,11 @@ public class RegisterDaoImpl implements RegisterDao{
 				//主要是为了存放多个对象的容器
 				UserInfo user = new UserInfo();
 				if(rs.next()){
-					//获取数据的时候,需要注意类型和该数据查询出来结果的序号或者列名
-					//第一种,通过序号进行查询
-					//Integer id = rs.getInt(1);
-					
-					//第二种,通过列的名称取
-					String tel1 = rs.getString("tel");
-					
-					//OO - 封装性 - 数据的载体
-					
-					user.setTel(tel1);
-					
-					//将该对象放入到集合容器中
+					user.setTel(rs.getString("tel"));
+					user.setFirstname(rs.getString("firstname"));
+					user.setLastname(rs.getString("lastname"));
+					user.setArea(rs.getString("area"));
+					user.setPwd(rs.getString("pwd"));
 				}
 				return user;
 			}

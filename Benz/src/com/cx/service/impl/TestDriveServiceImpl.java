@@ -6,20 +6,18 @@ import com.cx.entity.TestDrive;
 import com.cx.service.TestDriveService;
 
 public class TestDriveServiceImpl implements TestDriveService{
-	
-	TestDriveDao testdriveDao = new TestDriveDaoImpl();
-	
-	@Override
-	public void insertTestDrive(TestDrive testdrive) {
-		
-		testdriveDao.insertTestDrive(testdrive);
-	}
 
-
+	TestDriveDao testDriveDao= new TestDriveDaoImpl();
+	
 	@Override
 	public TestDrive selectByTel(String tel) {
 		
-		return testdriveDao.selectByTel(tel);
+		return testDriveDao.selectByTel(tel);
+	}
+
+	@Override
+	public void insertTestDrive(TestDrive testdrive) {
+		testDriveDao.insertTestDrive(testdrive);
 	}
 
 }

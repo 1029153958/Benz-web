@@ -11,72 +11,8 @@
 <link rel="stylesheet" href="/Benz/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/Benz/css/header.css" />
 <link rel="stylesheet" href="/Benz/css/club.css" />
-<!--
-<link rel="stylesheet" type="text/css" href="styles.css">
--->
-<style type="text/css">
-	/*.bc{
-		height: 600px;
-		width: 83%;
-		background-color: white;
-		box-shadow: 0px 0px 10px gray;
-		margin-top: 5%;
-	}
-	.bts{
-		padding-top: 10px;
-		padding-left: 8%;
-		height: 50px;
-		background-color:#E0E0E0;
-	}
-	.div5{
-				padding-left: 80px;
-				margin-top: 250px;
-			}
-	.wordback{
-		height: 300px;
-		width: 70.55%;
-		background-color:white;
-		margin-left: 15%;
-		margin-top: -100px;
-	}
-	.word{
-		padding:3% 15% ;
-	}
-	.code{
-		height: 300px;
-		width: 83%;
-		background-color:white;
-		padding:3% 5% ;
-	}
-	.shadow{
-		height: 150px;
-		width: 150px;
-		background-color: white;
-		box-shadow:0px 0px 10px gray; 
-		position: relative;	
-		}
-	#b1{
-		height: 100px;
-		width: 70.55%;
-		background-color: white;
-		margin-left: 15%;
-		margin-top: -100px;
-		position: absolute;
-	}*/
-</style>
-<!--<script type="text/javascript">
-			function f1(param){
-				for(var i =1;i<=2;i++){
-					var id =document.getElementById("d"+i);
-					id.style.display="none";
-					if(i===param)
-					{
-					id.style.display="block";
-					}
-				}
-			}
+<link rel="stylesheet" href="/Benz/css/foot.css" />
 
-</script>-->
 </head>
 
 <body>
@@ -524,7 +460,7 @@
 <div style="background-color: #E0E0E0;height:200%;">
 	<div class="wordback">
 		<div class="word">
-			<font style="font-family:仿宋;  font-size: 45px;">Mercedes me 车主俱乐部</font><br /><br/<br />
+			<font style="font-family:仿宋;  font-size: 45px;">Mercedes me 车主俱乐部</font><br /><br/><br />
 			<p style="font-size: 15px;">
 				Mercedes me 车主俱乐部是梅赛德斯－奔驰为尊贵的会员打造的高品质、人性化线上服务平台。在这里，奔驰携<br /><br />
 				手跨行业合作伙伴一道为会员打造覆盖出行、教育、金融、健康、旅游、娱乐等领域的一系列尊享服务和专属权<br /><br />

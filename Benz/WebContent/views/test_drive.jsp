@@ -25,6 +25,19 @@
 				text-decoration: none;
 			}
 		</style>
+		<script language="javascript">
+		  function check(form){
+			if (form.order_name.value==""){
+			  	alert("请输入姓名!");form.order_name.focus();return false;
+			}
+		  	if (form.tel.value==""){
+		  		alert("请输入电话号码!");form.tel.focus();return false;
+		  	}
+		  	if (form.order_address.value==""){
+		  		alert("请输入地址!");form.order_address.focus();return false;
+		  	}
+		  }
+		</script>
 	</head>
 	<body>
 		<header class="container header"style="overflow-x: hidden;overflow-y: hidden;">
@@ -446,21 +459,21 @@
 				<img src="/Benz/img/testdrivebg.jpg" style="float: right;"/>
 			</div>
 			<div style="padding-left: 13%;">
-				<form>
+				<form name="form1" action="/Benz/library/testdrive" method="post">
 					<fieldset>
 						<legend style="width: 60%;font-size: 14px;">欢迎在线预约试驾。只需填写姓名及手机号，我们会第一时间与您联系，安排试驾事宜。</legend>
-						<input class="mytext" type="text" placeholder="姓名"/><br />
-						<input type="radio" name="gender" value="Male" checked="checked" style="width: 5%;"/><span>男士</span>
-						<input type="radio" name="gender" value="Female" style="width: 5%;"/><span>女士</span>
+						<input name="order_name" id="order_name" class="mytext" type="text" placeholder="姓名"/><br />
+						<input type="radio" name="gender" value="男" checked="checked" style="width: 5%;"/><span>男士</span>
+						<input type="radio" name="gender" value="女" style="width: 5%;"/><span>女士</span>
 						<br />
-						<input class="mytext" type="text" placeholder="手机号码" style="margin-top: 20px;"/><br />
-						<input class="mytext" type="text" placeholder="地址" /><br />
+						<input name="tel" id="tel" class="mytext" type="text" placeholder="手机号码" style="margin-top: 20px;"/><br />
+						<input name="order_address" id="order_address" class="mytext" type="text" placeholder="地址"/><br />
 						<input class="mytext" type="text" id="t1" placeholder="请输入下方验证码" onblur="but()" /><br />
 						<span id="discode"></span>
 						<input type="button" value="换一换" class="c" style="height:30px;"onClick="createCode()"><br />
 						<input type="checkbox" style="margin: 20px;"/>我已仔细阅读并接受了所有<a href="#">隐私条款</a>
-						<div class="font-model text-center" style="background-color: #00ADEF;width: 30%;padding: 10px;margin-left: 5%;">
-							<a href="#"><span style="color: #FFFFFF;font-size: 20px;">申请试驾</span></a>
+						<div class="font-model text-center" style="width: 30%;padding: 10px;margin-left: 5%;">
+							<input type="submit" style="height: 30px;width: 200px;background-color:lightblue;border-radius: 20px;" onclick="return check(form1)" value="申请试驾"></input>
 						</div>
 					</fieldset>
 				</form>

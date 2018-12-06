@@ -11,12 +11,21 @@
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css"href="../css/login&register.css"/>
 		<title>登录</title>   
-		<style type="text/css">		</style>
+		<script language="javascript">
+		  function check(form){
+		  	if (form.tel.value==""){
+		  		alert("请输入电话号码!");form.tel.focus();return false;
+		  	}
+		  	if (form.pwd.value==""){
+		  		alert("请输入密码!");form.pwd.focus();return false;
+		  	}
+		  }
+		</script>
 	</head>
 	<body class="bg">
 		<div  style="margin-top: 100px;">
 			<div class="row mylogin1">
-				<form  role="form" >
+				<form name="form1" role="form" action="/Benz/library/login" method="post">
 					<div align="center"style="font-size: 30px;font-family: '楷体';color: white;"><b>登录</b></div>
 					<div align="left"style="color: whitesmoke;">请输入你的登录数据</div>
 				 	<fieldset>
@@ -25,13 +34,13 @@
 				 	<div align="center">
 				    <div >
 				    	 <span></span>
-				      	手机号码 <input type="text"  placeholder="请输入手机号码"class="phone">
+				      	手机号码 <input type="text" name="tel" placeholder="请输入手机号码"class="phone">
 				    </div>
 				  </div>
 				  <br /><br />
 				  <div align="center">
 				    <div>
-				     密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="password"  placeholder="请输入密码"class="pwd">
+				     密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="pwd" placeholder="请输入密码"class="pwd">
 				    </div>
 				  </div>
 				  <br /><br />
@@ -53,12 +62,12 @@
 				  <br />
 				  <div >
 				    <div align="center">
-				      <input type="button" class="btn"onclick="jump1()"value="登录"></input>
+				      <input type="submit" class="btn" onclick="return check(form1)" value="登录"></input>
 				    </div>
 				    <div >
 				    <div align="center">
 				    	<pre style="font-size: 15px;color: gray;">您还没有账户？</pre>
-				      <input type="button" class="btn" onclick="jump2()"value="注册"></input>
+				      <input type="button" class="btn" onclick="jump()"value="注册"></input>
 				    </div>
 				  </div>
 				  </fieldset>
@@ -66,18 +75,9 @@
 			</div>
 		</div>
 		<script>
-			function jump1(){
-				//  window.open("home_page.html");
-				if(pwd.value!=""&&phone.value!=""){
-				window.location.href="home_page.html"
+			function jump(){
+				window.location.href="../views/register.jsp"
 			}
-				}
-			function jump2(){
-				//window.open("register.html");
-				if(pwd.value!=""&&phone.value!=""){
-				window.location.href="../views/register.html"
-			}
-				}
 		</script>
 	</body>
 </html>

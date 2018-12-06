@@ -11,12 +11,30 @@
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>注册</title>
 		<link rel="stylesheet" type="text/css" href="../css/login&register.css"/>
-		<style type="text/css">	</style>
+		<script language="javascript">
+		  function check(form){
+			if (form.firstname.value==""){
+			  	alert("请输入姓!");form.firstname.focus();return false;
+			}
+			if (form.lastname.value==""){
+			  	alert("请输入名!");form.lastname.focus();return false;
+			}
+		  	if (form.tel.value==""){
+		  		alert("请输入电话号码!");form.tel.focus();return false;
+		  	}
+		  	if (form.pwd.value==""){
+		  		alert("请输入密码!");form.pwd.focus();return false;
+		  	}
+		  	if(form.pwd1.value!=form.pwd.value){
+		  		alert("两次密码不一致!");form.pwd.focus();return false;
+		  	}
+		  }
+		</script>
 	</head>
 	<body class="bg">
 		<div class="container-fluid" style="margin-top: 100px;">
 			<div class="row mylogin2">
-				<form  role="form" >
+				<form name="form1" role="form" action="/Benz/library/register" method="post">
 					<div align="center"style="font-size: 30px;font-family: '楷体';"><b>注册</b></div>
 					<br />
 					<div align="left"">请填写下列各栏，以为 梅赛德斯-奔驰电子商务平台 进行注册</div>
@@ -27,13 +45,14 @@
 				 	<div>
 				    <div >
 				    	 <span class="glyphicon glyphicon-user form-control-feedback"></span>
-				      	*名 <input type="text" class="form-control" id="firstname "class="name">
+				    	  *姓 <input name="firstname" type="text" class="form-control" id="firstname"class="user">
+		
 				    </div>
 				  </div>
 				  <br /><br />
 				  <div>
 				    <div >
-				     *姓 <input type="text" class="form-control" id="lastname"class="user">
+				     *名 <input name="lastname" type="text" class="form-control" id="lastname "class="name">
 				      <span></span>
 				    </div>
 				  </div>
@@ -41,31 +60,31 @@
 				  <div>
 				    <div>
 				    	 <span></span>
-				      	国家或地区<select name="cap"id="cap"value="0">
-				      		<option value="0">中国</option>
-				      		<option value="1">美国</option>
-				      		<option value="2">日本</option>
-				      		<option value="3">韩国</option>
-				      		<option value="4">印度</option>
-				      		<option value="5">英国</option>
+				      	国家或地区<select name="area"id="cap"value="中国">
+				      		<option value="中国">中国</option>
+				      		<option value="美国">美国</option>
+				      		<option value="日本">日本</option>
+				      		<option value="韩国">韩国</option>
+				      		<option value="印度">印度</option>
+				      		<option value="英国">英国</option>
 				      	</select>
 				    </div>
 				  </div><br /><br />
 				  <div >
 				    <div>
-				     *电话号码<input type="text" class="form-control" id="lastname"value="+86"class="phone">
+				     *电话号码<input name="tel" type="text" class="form-control" id="tel" class="phone">
 				      <span></span>
 				    </div>
 				  </div><br /><br />
 				  <div >
 				    <div>
-				     *请设置密码<input type="password" class="form-control" id="lastname"placeholder="请输入密码"class="pwd">
+				     *请设置密码<input name="pwd" type="password" class="form-control" id="pwd"placeholder="请输入密码"class="pwd">
 				      <span></span>
 				    </div>
 				  </div><br /><br />
 				  <div>
 				    <div >
-				     *请再次确认密码<input type="password" class="form-control" id="lastname"placeholder="密码必须一致"class="pwd">
+				     *请再次确认密码<input name="pwd1" type="password" class="form-control" id="pwd1"placeholder="密码必须一致"class="pwd">
 				      <span></span>
 				    </div>
 				  </div><br /><br />
@@ -80,7 +99,7 @@
 		<br /><br />
 		<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10"align="center">
-				      <input type="button" class="btn" onclick="jump()" value="注册"></input>
+				      <input type="submit" class="btn" onclick="return check(form1)" value="注册"></input>
 				    </div>
 				  </fieldset>
 				</form>

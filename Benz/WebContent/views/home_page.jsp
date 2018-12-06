@@ -55,7 +55,7 @@ Cars car = null;
 							   	 		<h3>S级</h3><br />
 <%for(int i=0;i<list.size();i++){
 	car=list.get(i);
-	if(car.getCar_level().equals("S级")&&car.getCar_type().equals("轿车")){
+	if(car.getCar_level().equals("S级")){
 	%>
 							   			<a href="<%=car.getCar_href() %>">
 							    		<h4><%=car.getCar_name() %></h4>
@@ -75,7 +75,7 @@ Cars car = null;
 							   	 		<h3>E级</h3><br />
 <%for(int i=0;i<list.size();i++){
 	car=list.get(i);
-	if(car.getCar_level().equals("E级")&&car.getCar_type().equals("轿车")){
+	if(car.getCar_level().equals("E1级")){
 	%>
 							   			<a href="<%=car.getCar_href() %>">
 							    		<h4><%=car.getCar_name() %></h4>
@@ -93,7 +93,7 @@ Cars car = null;
 							   	 		<h3>C级</h3><br />
 <%for(int i=0;i<list.size();i++){
 	car=list.get(i);
-	if(car.getCar_level().equals("C级")&&car.getCar_type().equals("轿车")){
+	if(car.getCar_level().equals("C1级")){
 	%>
 							   			<a href="<%=car.getCar_href() %>">
 							    		<h4><%=car.getCar_name() %></h4>
@@ -218,7 +218,7 @@ Cars car = null;
 						    			<h3>E级</h3><br />
 <%for(int i=0;i<list.size();i++){
 	car=list.get(i);
-	if(car.getCar_level().equals("E级")&&car.getCar_type().equals("轿跑车&敞篷跑车")){
+	if(car.getCar_level().equals("E2级")){
 	%>
 							   			<a href="<%=car.getCar_href() %>">
 							    		<h4><%=car.getCar_name() %></h4>
@@ -235,7 +235,7 @@ Cars car = null;
 						    			<h3>C级</h3><br />
 <%for(int i=0;i<list.size();i++){
 	car=list.get(i);
-	if(car.getCar_level().equals("C级")&&car.getCar_type().equals("轿跑车&敞篷跑车")){
+	if(car.getCar_level().equals("C2级")){
 	%>
 							   			<a href="<%=car.getCar_href() %>">
 							    		<h4><%=car.getCar_name() %></h4>
@@ -252,7 +252,7 @@ Cars car = null;
 						    			<h3>SLC</h3><br />
 <%for(int i=0;i<list.size();i++){
 	car=list.get(i);
-	if(car.getCar_level().equals("SLC级")&&car.getCar_type().equals("轿跑车&敞篷跑车")){
+	if(car.getCar_level().equals("SLC级")){
 	%>
 							   			<a href="<%=car.getCar_href() %>">
 							    		<h4><%=car.getCar_name() %></h4>
@@ -271,7 +271,7 @@ Cars car = null;
 						    			<h3>V级</h3><br />
 <%for(int i=0;i<list.size();i++){
 	car=list.get(i);
-	if(car.getCar_level().equals("V级")&&car.getCar_type().equals("MPV")){
+	if(car.getCar_level().equals("V级")){
 	%>
 							   			<a href="<%=car.getCar_href() %>">
 							    		<h4><%=car.getCar_name() %></h4>

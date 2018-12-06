@@ -35,6 +35,7 @@ public class TestDriveDaoImpl implements  TestDriveDao{
 					td.setOrderGender(rs.getString("order_gender"));
 					td.setTel(rs.getString("tel"));
 					td.setCarName(rs.getString("car_name"));
+					td.setOrder_address(rs.getString("order_address"));
 				}
 				
 				return td;
@@ -50,13 +51,14 @@ public class TestDriveDaoImpl implements  TestDriveDao{
 			
 			@Override
 			public PreparedStatement executePst(Connection conn) throws SQLException {
-				String sql="insert into test_drive values(?,?,?,?)";
+				String sql="insert into test_drive values(?,?,?,?,?)";
 				
 				PreparedStatement pst = conn.prepareStatement(sql);
 				pst.setString(1, testdrive.getOrderName());
 				pst.setString(2, testdrive.getOrderGender());
 				pst.setString(3, testdrive.getTel());
 				pst.setString(4, testdrive.getCarName());
+				pst.setString(5, testdrive.getOrder_address());
 				
 				return pst;
 			}

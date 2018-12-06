@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cx.entity.Cars;
-import com.cx.service.CarsServiceImpl;
-import com.cx.service.impl.CarsService;
+import com.cx.service.CarsService;
+import com.cx.service.impl.CarsServiceImpl;
 
 @WebServlet(urlPatterns="/cars")
 public class SelectCarsAction extends HttpServlet {

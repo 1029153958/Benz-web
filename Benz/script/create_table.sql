@@ -22,7 +22,8 @@ create table test_drive(
 order_name varchar2(20) not null,
 order_gender varchar2(4) not null,
 tel varchar2(20) not null,
-car_name varchar2(60) not null
+car_name varchar2(60) not null,
+order_address varchar2(60)
 );
 
 drop table user_info;
@@ -87,4 +88,4 @@ INSERT INTO cars VALUES ('威霆高端商务车', '29.60', 'Vitp', '/Benz/img/ca
 INSERT INTO order_info VALUES ('司雨蒙', '男', '18862613970', '397020181204', '梅赛德斯-迈巴赫S级轿车', '江苏省苏州市张家港市');
 
 
-INSERT INTO test_drive VALUES ('司雨蒙', '男', '18862613970', '梅赛德斯-迈巴赫S级轿车');
+INSERT INTO test_drive VALUES ('司雨蒙', '男', '18862613970', '梅赛德斯-迈巴赫S级轿车','江苏省苏州市张家港');

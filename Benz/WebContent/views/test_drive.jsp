@@ -453,6 +453,7 @@
 						<input type="radio" name="gender" value="Female" style="width: 5%;"/><span>女士</span>
 						<br />
 						<input class="mytext" type="text" placeholder="手机号码" style="margin-top: 20px;"/><br />
+						<input class="mytext" type="text" placeholder="地址" /><br />
 						<input class="mytext" type="text" id="t1" placeholder="请输入下方验证码" onblur="but()" /><br />
 						<span id="discode"></span>
 						<input type="button" value="换一换" class="c" style="height:30px;"onClick="createCode()"><br />

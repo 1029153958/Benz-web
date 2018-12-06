@@ -1,0 +1,41 @@
+create table tbl_husband(
+id number(7) constraint tbl_husband_id_pk primary key,
+name varchar2(20) constraint tbl_husband_name_uq unique
+constraint tbl_husband_name_nn not null,
+gender char(1) constraint tbl_husband_gender_ck check(gender in('f','m')),
+marry_date date default sysdate);
+
+表级操作
+create table tbl_husband(
+id number(7) ,
+name varchar2(20),
+gender char(1),
+marry_date date default sysdate,
+constraint tbl_husband_id_pk primary key(id),
+constraint tbl_husband_name_uq unique(name),
+constraint tbl_husband_name_nn check(name is not null),
+constraint tbl_husband_gender_ck check(gender in('F','M'))
+);
+
+客户表
+create table tbl_customer(
+id number(7) ,
+cname varchar(20),
+phone varchar(20),
+constraint tbl_customer_id_pk primary key(id),
+constraint tbl_customer_id_nn check(cname is not null),
+constraint tbl_customer_phone_uq unique(phone)
+);
+
+订单表
+create table tbl_order(
+id number(7) ,
+ordno varchar2(20),
+price number(7,2),
+create_date date default sysdate,
+customer_id number(7),
+constraint tbl_ord_id_pk primary key(id),
+constraint tbl_ordno_nn check(ordno is not null),
+constraint tbl_ordno_uq unique(ordno),
+constraint tbl_customer_id_fk foreign key (customer_id) references tbl_customer(id)
+);

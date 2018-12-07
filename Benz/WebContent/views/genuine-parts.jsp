@@ -420,7 +420,30 @@
 					</div>
 				</div>
 				<div class="text"style="color: white;">
-					<a href="http://localhost:8888/Benz/views/customer-service.jsp">客户服务</a>
+					客户服务
+					<div class="mbox" style="padding-left: 10%;padding-right: 10%;">
+						<div style="margin-bottom: 30px;">
+							<h1>客户服务</h1>
+						</div>
+						<div class="row" style="margin-bottom: 70px;">
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/promotion.jsp"><img src="/Benz/img/customer-service/nav-promotion_660x360.jpg" width="100%"/>最新活动信息</a>
+								<p style="font-size: 12px;padding-top: 5px;">丰富多彩的活动让车主享受车生活，与爱车共读美好时光</p>
+							</div>
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/customer-service.jsp"><img src="/Benz/img/customer-service/nav-maintenance-3x_660x360.jpg" width="100%"/>车辆保养与维修</a>
+								<p style="font-size: 12px;padding-top: 5px;">提供人性化的选车和购车方案，让购车体验更多元，更轻松。</p>
+							</div>
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/club.jsp"><img src="/Benz/img/customer-service/nav-meclub-3x_660x360.jpg"width="100%"/>mercedes me车主俱乐部</a>
+								<p style="font-size: 12px;padding-top: 5px;">携手跨行业合作伙伴为会员打造优质的用车体验和多方位的生活关怀。</p>
+							</div>
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/finanical-service.jsp"><img src="/Benz/img/customer-service/finance_service.jpg" width="100%"/>金融服务</a>
+								<p style="font-size: 12px;padding-top: 5px;">选择奔驰金融，轻松拥享梦想星徽座驾。</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="text" style="color: white;">
 					<a href="http://localhost:8888/Benz/views/mercedes_me.jsp">mercedes me</a>

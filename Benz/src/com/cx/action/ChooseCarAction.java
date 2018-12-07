@@ -40,6 +40,11 @@ public class ChooseCarAction extends HttpServlet{
 		new_driver.setOrder_id(order_id);
 		service.insertTestDrive(new_driver);
 		//System.out.println(new_driver);
+		
+		
+		SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd"); 
+		String now_time=df1.format(day);
+		req.getSession().setAttribute("now_time", now_time);
 	}
 	
 }

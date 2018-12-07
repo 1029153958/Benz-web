@@ -53,8 +53,8 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="input-group">
-						<input name="area_name" type="text" placeholder="根据姓名模糊查询" class="form-control"> <span
-							class="input-group-btn">
+						<input name="area_name" type="text" placeholder="根据姓名模糊查询" class="form-control"> 
+						<span class="input-group-btn">
 							<button class="btn btn-success" type="submit">搜索</button>
 						</span>
 					</div>

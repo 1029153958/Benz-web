@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>注册</title>
-		<link rel="stylesheet" type="text/css" href="../css/login&register.css"/>
+		<link rel="stylesheet" type="text/css" href="/Benz/css/login&register.css"/>
 		<script language="javascript">
 		  function check(form){
 			if (form.firstname.value==""){
@@ -106,9 +106,9 @@
 			</div>
 		</div>		
 		<!--<!--引入jquery-->
-		<script src="../plugins/jquery/jquery.min.js"></script>
+		<script src="/Benz/plugins/jquery/jquery.min.js"></script>
 		<!--引入bootstrap.min.js-->
-		<script src="../plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>	-->
+		<script src="/Benz/plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>	-->
 		<script language="javascript">
 		var code; //在全局 定义验证码
 		function createCode()

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -420,7 +422,30 @@
 					</div>
 				</div>
 				<div class="text"style="color: white;">
-					<a href="http://localhost:8888/Benz/views/customer-service.jsp">客户服务</a>
+					客户服务
+					<div class="mbox" style="padding-left: 10%;padding-right: 10%;">
+						<div style="margin-bottom: 30px;">
+							<h1>客户服务</h1>
+						</div>
+						<div class="row" style="margin-bottom: 70px;">
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/promotion.jsp"><img src="/Benz/img/customer-service/nav-promotion_660x360.jpg" width="100%"/>最新活动信息</a>
+								<p style="font-size: 12px;padding-top: 5px;">丰富多彩的活动让车主享受车生活，与爱车共读美好时光</p>
+							</div>
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/customer-service.jsp"><img src="/Benz/img/customer-service/nav-maintenance-3x_660x360.jpg" width="100%"/>车辆保养与维修</a>
+								<p style="font-size: 12px;padding-top: 5px;">提供人性化的选车和购车方案，让购车体验更多元，更轻松。</p>
+							</div>
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/club.jsp"><img src="/Benz/img/customer-service/nav-meclub-3x_660x360.jpg"width="100%"/>mercedes me车主俱乐部</a>
+								<p style="font-size: 12px;padding-top: 5px;">携手跨行业合作伙伴为会员打造优质的用车体验和多方位的生活关怀。</p>
+							</div>
+							<div class="col-md-3">
+								<a href="http://localhost:8888/Benz/views/finanical-service.jsp"><img src="/Benz/img/customer-service/finance_service.jpg" width="100%"/>金融服务</a>
+								<p style="font-size: 12px;padding-top: 5px;">选择奔驰金融，轻松拥享梦想星徽座驾。</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="text" style="color: white;">
 					<a href="http://localhost:8888/Benz/views/mercedes_me.jsp">mercedes me</a>
@@ -438,7 +463,7 @@
 						订单查询
 					</div>
 					<div class="order-title-date">
-						8102年92月11日
+						${now_time}
 					</div>
 				</div>
 				
@@ -455,8 +480,8 @@
 			        <div class="order-number">
 			          	<b class="title-number">#${new_driver.order_id}</b><br>
 			         	<br>
-			          	<b>创建时间：</b>2014-11-7 11:31<br>
-			          	<b>订单总额：</b>￥${car.car_price}万<br>
+			          	<b>创建时间：</b>${now_time}<br>
+			          	<b>订单总额：</b>¥${car.car_price}万<br>
 			          	<b>订单状态：</b>处理中
 			        </div>
 				</div>
@@ -468,9 +493,10 @@
 					</div>
 					<div class="body-info-right">
 						<b>${car.car_name}</b><br>
+						<b>车型：</b>${car.car_type}&nbsp;&nbsp;&nbsp;&nbsp;${car.car_level}<br>
+						<b>价格：</b>¥${car.car_price}万&nbsp;&nbsp;&nbsp;&nbsp;<b>月供：</b>约¥<fmt:parseNumber integerOnly="true" value="${car.car_price*1000/12}"></fmt:parseNumber><br>
 						<b>外观：</b>北极白色<br>
 			            <b>内饰：</b>黑色<br>
-			            <b>轮毂：</b>43.2 厘米（17 英寸）轻合金车轮<br>
 			            <b>精选定制：</b>无加装<br>
 			            <b>选装配备：</b>无加装<br>
 					</div>
